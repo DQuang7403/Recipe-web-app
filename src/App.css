@@ -1,0 +1,127 @@
+:root{
+  --primary-color: #090C1D;
+  --btn-color: #EC7C13;
+  --light-blue: #66CECF;
+  --background-green-color: #66E795;
+}
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Secular One', sans-serif 
+}
+body {
+  overflow-x: hidden;
+}
+.spacer{
+  aspect-ratio: 1440/26;
+  width: 102%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(./assets/Vector.svg);
+  
+}  
+
+.onActionButton{
+  background-color: var(--btn-color);
+  color: var(--primary-color);
+  padding: 1em;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+}
+.onActionButton:hover{
+  background-color: #C45B00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.emailSubmit{
+  background-color: var(--background-green-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding-bottom: 2em;
+}
+.emailSubmit > h1{
+  max-width: 35em;
+  text-align: center;
+  margin: 1.5em 0;
+}
+.emailSubmit > form{
+  background-color: white;
+  padding: .7em;
+  border-radius: 10px;
+}
+.emailSubmit input{
+  width: 20em;
+  border: none;
+  height: 1.2em;
+  outline: none;
+  font-size: 1.5rem;
+}
+.emailSubmit button{
+  padding: .6em 1.5em;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.subFooter{
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3em 0;
+  
+}
+.iconAndContact{
+  max-width: 20em;
+}
+.iconAndContact >img{
+  margin-bottom: 1em;
+}
+.socialMedia{
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+.socialMedia > img{
+  cursor: pointer;
+}
+.Links{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: #8E8E8E;
+}
+.Links > h2{
+  color: #D9D9D9;
+  font-weight: lighter;
+  
+} 
+.Links > p{
+  width: 100%;
+  cursor: pointer;
+}
