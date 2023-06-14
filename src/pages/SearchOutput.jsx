@@ -19,6 +19,7 @@ export default function SearchOutput() {
   }, [input.search]);
   return (
     <Grid>
+      {returnedData.length === 0 && "No results found"}
       {returnedData.map((returned) => {
         return (
           <div key={returned.id}>
@@ -46,7 +47,7 @@ const Grid = styled.div`
     text-align: center;
     padding-top: 1em;
   }
-  a{
+  a {
     color: var(--primary-color);
     text-decoration: none;
   }

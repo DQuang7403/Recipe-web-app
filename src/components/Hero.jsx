@@ -60,8 +60,8 @@ const HeroSection = styled.section`
 const LeftHeroSection = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 10vw;
-  margin-top: 1em;
+  margin-left: 8vw;
+  margin-top: 3em;
   max-width: 34em;
   align-items: flex-start;
 `;

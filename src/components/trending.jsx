@@ -25,50 +25,37 @@ export default function Trending() {
     }
   };
   return (
-    <Wrapper>
+    <>
       <h2>Trending</h2>
-      <Splide
-        options={{
-          pagination: false,
-          perPage: 4,
-          arrows: false,
-          drag: "free",
-          gap: "1em",
-          breakpoints: {
-            950: {
-              perPage: 2,
-            },
-          },
-        }}
-      >
+      <Wrapper>
         {populars.map((popular) => {
           return (
-            <SplideSlide key={popular.id}>
-              <Dish>
-                <Link to={"/Recipe/Detail/" + popular.id}>
-                  <img src={popular.image} alt="No Image" />
-                  <p>{popular.title}</p>
-                </Link>
-              </Dish>
-            </SplideSlide>
+            <Dish key={popular.id}>
+              <Link to={"/Recipe/Detail/" + popular.id}>
+                <img src={popular.image} alt="No Image" />
+                <p>{popular.title}</p>
+              </Link>
+            </Dish>
           );
         })}
-      </Splide>
-    </Wrapper>
+      </Wrapper>
+    </>
   );
 }
 const Wrapper = styled.section`
-  padding: 1em 8%;
-  h2 {
-    color: #193452;
-    margin-top: 1em;
-  }
+  display: flex;
+  overflow-x: hidden;
+  /* width: 100vw; */
+  gap: 32px; 
+  scroll-behavior: smooth;
+  overflow-x: scroll;
 `;
+
 const Dish = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 20em;
+  width: 20em;
   p {
     font-size: 1rem;
     text-align: center;
@@ -81,7 +68,7 @@ const Dish = styled.div`
     width: 100%;
     height: 100%;
   }
-  a{
+  a {
     color: var(--primary-color);
     text-decoration: none;
   }

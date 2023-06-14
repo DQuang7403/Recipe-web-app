@@ -6,14 +6,14 @@ export default function CategoryLayout() {
   // const [activeCategory, setActiveCategory] = useState("Trending");
   return (
     <Container>
-      <h1 style={{textAlign:"center", marginTop:"1em"}}>Check out our featured recipes section</h1>
+      <h1 style={{textAlign:"center", marginTop:"1.3em"}}>Check out our featured recipes section</h1>
       <SearchInput />
       <Wrapper>
         <NavLink
           to=""
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
+          // className={({ isActive, isPending }) =>
+          //   isPending ? "pending" : isActive ? "active" : ""
+          // }
         >
           <Card>
             <h4>Trending</h4>

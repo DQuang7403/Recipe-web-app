@@ -69,28 +69,6 @@ export default function RecipeDetail() {
     </>
   );
 }
-const Container = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2em;
-  margin: 0 3em;
-  flex-grow: 1;
-  
-  .instruction {
-    line-height: 1.5em;
-    a{
-      text-decoration: none;
-    }
-  }
-  b{
-    color: darkblue;
-  }
-  h4{
-    margin-bottom: 1em;
-
-  }
-`;
 const Warpper = styled.div`
   display: flex;
   align-items: flex-start;
@@ -124,9 +102,33 @@ const Warpper = styled.div`
   }
   @media (width <= 900px) {
     flex-direction: column;
+    align-items: center;
     width: 90vw;
   }
 `;
+const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+  margin: 0 3em;
+  flex-grow: 1;
+  
+  .instruction {
+    line-height: 1.5em;
+    a{
+      text-decoration: none;
+    }
+  }
+  b{
+    color: darkblue;
+  }
+  h4{
+    margin-bottom: 1em;
+
+  }
+`;
+
 const Button = styled.button`
   background-color: #d9d9d9;
   font-size: 0.9rem;

@@ -32,7 +32,7 @@ const Container = styled.section`
   flex-direction: column;
 
   .decription {
-    margin: 0 4em;
+    margin: 0 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,21 +44,22 @@ const ExploreDecription = styled.div`
   display: flex;
   margin: 0 10%;
   align-items: center;
+  
   p {
     font-size: 1.7rem;
     font-weight: bold;
     display: block;
+    width: 100%;
   }
   img {
+    margin: 1em;
     aspect-ratio: 5/3;
-    width: 40vw;
+    width: clamp(17em, 40vw, 28em);
     border-radius: 40px;
     margin-bottom: 2em;
   }
   @media (width < 900px) {
     flex-direction: column;
-    img{
-      width: min(60vw, 30em);
-    }
+    margin: 0;
   }
 `;

@@ -37,10 +37,17 @@ export default function Stats() {
 const StatsStyling = styled.div`
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2em;
   align-items: center;
-  margin: 1em 10%;
+  justify-content: space-between;
+  margin: 1em 8%;
   transform: translate(0, -50%);
+  @media (width < 1080px) {
+    transform: translate(0, 0);
+    margin: 1em 10%;
+    flex-grow: 1;
+  }
 `;
 const Stat = styled.div`
   background-color: var(--light-blue);
@@ -51,8 +58,10 @@ const Stat = styled.div`
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1em;
-  width: min(13em, 15vw);
+  flex-grow: 1;
+  width: clamp(11em, 15vw, 15em);
   img {
     width: min(3.5em, 10vw);
   }

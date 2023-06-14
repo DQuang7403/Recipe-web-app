@@ -7,7 +7,7 @@ export default function Recipe() {
   return (
     <section>
       <Trending />
-      <Dessert />
+      {/* <Dessert /> */}
     </section>
   );
 }
