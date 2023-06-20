@@ -43,10 +43,16 @@ const StatsStyling = styled.div`
   justify-content: space-between;
   margin: 1em 8%;
   transform: translate(0, -50%);
-  @media (width < 1080px) {
-    transform: translate(0, 0);
+  @media (width < 1120px) {
     margin: 1em 10%;
-    flex-grow: 1;
+    flex: 1;
+    transform: translate(0, -25%);
+   
+  }
+  @media (width < 750px) {
+    margin: 1em;
+    transform: translate(0, 0);
+    gap: 1em;
   }
 `;
 const Stat = styled.div`
@@ -63,12 +69,15 @@ const Stat = styled.div`
   flex-grow: 1;
   width: clamp(11em, 15vw, 15em);
   img {
-    width: min(3.5em, 10vw);
+    width: clamp(2.8em, 10vw, 3.5em);
   }
   .individualStat {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     align-items: center;
+  }
+  @media (width < 750px) {
+    font-size: 1rem;
   }
 `;

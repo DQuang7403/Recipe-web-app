@@ -21,7 +21,7 @@ export default function SearchInput() {
   )
 }
 const StyledSearch = styled.input`
-  width: max(35vw, 20em);
+  width: clamp(13em, 35vw, 20em);
   padding: .6em .5em;
   border-radius: 12px;
   margin-right: .8em;

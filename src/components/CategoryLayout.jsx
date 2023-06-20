@@ -54,6 +54,7 @@ const Wrapper = styled.section`
   justify-content: center;
   gap: 1em;
   margin: 0 auto;
+  /* overflow-x: scroll; */
 `;
 const Card = styled.button`
   background-color: #d9d9d9;

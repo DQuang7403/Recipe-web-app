@@ -5,23 +5,25 @@ import styled from "styled-components";
 export default function MealPlan() {
   return (
     <>
-      <h1 className="title" style={{textAlign:"center", marginTop:'1em'}}>Generate Meal Plan</h1>
+     <h1 className="title" style={{ textAlign: "center", marginTop: "1em" }}>
+        Ingredient Nutrition
+      </h1>
       <MealPlanSection>
-        <img src={mealPlanImg} alt="Image" />
-        <MealPlanContainer>
+        <MealPlanContainer> 
           <div className="mealPlanheading">
-            <span className="customMealPlanText">Generate a meal plan</span>{" "}
-            with three meals per day (breakfast, lunch, and dinner)
+            View in-depth <span className="customMealPlanText">nutrition</span>{" "}
+            info on millions of foods
           </div>
           <div className="mealPlanSubHeading">
-            Display the generated meal plan, including recipes for each meal
-            category. Emphasize the variety, nutritional balance, and flavors in
-            the plan
+            Understanding ingredient nutrition is key to informed dietary
+            choices. Using our ingredient nutrition section for healthier meal
+            planning and overall wellness.
           </div>
           <Link to="/MealPlanning">
-            <button className="onActionButton">Generate Now!</button>
+            <button className="onActionButton">Start now!</button>
           </Link>
         </MealPlanContainer>
+        <img src={mealPlanImg} alt="Image" />
       </MealPlanSection>
     </>
   );
@@ -51,12 +53,12 @@ const MealPlanContainer = styled.div`
   .title {
     margin: 1em 0;
     text-align: center;
-    font-size: 2.6rem;
+    font-size: 2rem;
     color: var(--primary-color);
   }
   .mealPlanheading {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 550;                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
   }
 
   .mealPlanSubHeading {

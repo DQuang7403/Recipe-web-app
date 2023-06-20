@@ -48,7 +48,8 @@ const Container = styled.section`
   align-items: center;
   justify-content: space-evenly;
   padding: 3em 0;
-  @media (width <= 1000px) {
+  gap: 1em;
+  @media (width <= 1024px) {
     align-items: center;
     flex-direction: column;
   }
@@ -77,6 +78,7 @@ const Links = styled.div`
   gap :2em;
   .Link {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 1em;
     color: #8e8e8e;
@@ -87,8 +89,12 @@ const Links = styled.div`
     }
     p {
       width: 100%;
-      font-size: clamp(1rem, 8vw, 1rem);
+      font-size: clamp(1rem, 3vw, 1.2rem);
       cursor: pointer;
     }
+    
+  }@media (width <= 500px) {
+    align-items: flex-start;
+    flex-direction: column;
   }
 `

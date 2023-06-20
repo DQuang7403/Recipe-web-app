@@ -5,7 +5,6 @@ export default function EmailSubmit() {
   function submitHandler(e) {
     e.preventDefault();
     console.log(email);
-    if (email === "") return;
     setEmail("");
   }
   useEffect(() => {
@@ -59,16 +58,26 @@ const Form = styled.section`
     border: none;
     height: 1.2em;
     outline: none;
-    font-size: clamp(1.2rem,5vw, 1.5rem);
+    font-size: 1.4rem;
   }
   button {
-    padding: clamp(.2em, 2vw, 0.6em) clamp(.5em, 4vw, .9em);
+    padding: clamp(.4em, 20vw, 0.6em) clamp(.9em, 20vw, 1.2em);
     background-color: var(--primary-color);
     color: white;
     font-weight: bold;
     border: none;
-    font-size: clamp(.9rem,2vw,1.2rem);
+    font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
+  }
+  @media ( width <= 500px){
+    input{
+      display: block;
+      width: calc(100vw - 5em);
+    }
+    button{
+      width: 100%;
+      margin-top: .6em;
+    }
   }
 `;

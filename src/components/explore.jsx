@@ -38,6 +38,10 @@ const Container = styled.section`
     align-items: center;
     gap: 2em;
   } 
+  @media (width < 900px) {
+    padding-bottom: 3em;
+    
+  }
 `;
 
 const ExploreDecription = styled.div`
@@ -54,12 +58,18 @@ const ExploreDecription = styled.div`
   img {
     margin: 1em;
     aspect-ratio: 5/3;
-    width: clamp(17em, 40vw, 28em);
+    width: 40vw;
     border-radius: 40px;
     margin-bottom: 2em;
   }
   @media (width < 900px) {
     flex-direction: column;
     margin: 0;
+    img{
+      width: clamp(15em, 90vw, 30em);
+    }
+    p {
+    font-size: 1.3rem;
+  }
   }
 `;

@@ -51,17 +51,39 @@ const HeroSection = styled.section`
     position: relative;
     transform: translate(5em, 0);
   }
-  @media (width <= 700px) {
-    img{
+  @media (width <= 750px) {
+    justify-content: center;
+    img {
       display: none;
     }
+    
+  }
+  @media (width <= 500px) {
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+    .Tagline {
+      font-size: 1.7rem;
+      margin-bottom: 1.2em;
+    }
+    .heroDecription {
+      font-size: 1rem;
+    }
+    margin: 1em;
   }
 `;
 const LeftHeroSection = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 8vw;
+  margin-left: 3em;
   margin-top: 3em;
   max-width: 34em;
   align-items: flex-start;
+
+  @media (width <= 1024px) {
+    margin-left: 2em;
+  }
+  @media (width <= 750px) {
+    margin-left: 0em;
+  }
 `;

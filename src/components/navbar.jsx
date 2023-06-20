@@ -46,8 +46,8 @@ export default function Navbar() {
           <Link to="/Recipe">
             <li className="navLink">Recipes</li>
           </Link>
-          <Link to="/MealPlanning">
-            <li className="navLink">Meal Planning</li>
+          <Link to="/Nutrition">
+            <li className="navLink">Nutrition</li>
           </Link>
           <Link to="/About">
             <li className="aboutBtn">About</li>
