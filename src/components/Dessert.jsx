@@ -102,6 +102,11 @@ const Wrapper = styled.section`
       grid-auto-columns: 35%;
     }
   }
+  @media (width <= 500px) {
+    .slider {
+      grid-auto-columns: 100%;
+    }
+  }
 `;
 //550
 const Dish = styled.div`

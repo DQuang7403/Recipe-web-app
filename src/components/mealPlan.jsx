@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 export default function MealPlan() {
   return (
-    <>
-     <h1 className="title" style={{ textAlign: "center", marginTop: "1em" }}>
+    <Wrapper>
+      <h1 className="title" style={{ textAlign: "center", fontSize: "2rem" }}>
         Ingredient Nutrition
       </h1>
       <MealPlanSection>
-        <MealPlanContainer> 
+        <MealPlanContainer>
           <div className="mealPlanheading">
             View in-depth <span className="customMealPlanText">nutrition</span>{" "}
             info on millions of foods
@@ -25,13 +25,15 @@ export default function MealPlan() {
         </MealPlanContainer>
         <img src={mealPlanImg} alt="Image" />
       </MealPlanSection>
-    </>
+    </Wrapper>
   );
 }
-
+const Wrapper = styled.section`
+  padding: 5vw;
+`;
 const MealPlanSection = styled.div`
   display: flex;
-  margin: 1em 10%;
+  margin: 2em 10%;
   align-items: center;
   justify-content: space-between;
   gap: 15vw;
@@ -58,7 +60,7 @@ const MealPlanContainer = styled.div`
   }
   .mealPlanheading {
     font-size: 1.5rem;
-    font-weight: 550;                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+    font-weight: 550;
   }
 
   .mealPlanSubHeading {

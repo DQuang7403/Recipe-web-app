@@ -5,6 +5,7 @@ export default function EmailSubmit() {
   function submitHandler(e) {
     e.preventDefault();
     console.log(email);
+    if(email === "") return;
     setEmail("");
   }
   useEffect(() => {
@@ -40,7 +41,7 @@ const Form = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 2em;
-  padding: 2em ;
+  padding: 5vw ;
   p {
     max-width: 35em;
     text-align: center;

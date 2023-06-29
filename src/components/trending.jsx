@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
 import likes from "../assets/love.png"
 import stopwatch from "../assets/speedometer.png"
@@ -28,6 +27,7 @@ export default function Trending() {
   };
   return (
     <Wrapper>
+      {/* {console.log(populars[0].extendedIngredients[0].aisle)} */}
       <h2>Trending</h2>
       <div className="slider snaps-inline">
         {populars.map((popular) => {
@@ -52,7 +52,6 @@ export default function Trending() {
   );
 }
 const Wrapper = styled.section`
-  /* background: var( --background-green-color); */
   padding-bottom: 1em;
   margin: 0 5%;
   width: 100vw;
@@ -75,9 +74,9 @@ const Wrapper = styled.section`
     scroll-snap-align: start;
     scroll-padding-inline: 1.5em;
   }
-  @media (width <= 600px) {
+  @media (width <= 500px) {
     .slider {
-      grid-auto-columns: 60%;
+      grid-auto-columns: 100%;
     }
   }
 `;
@@ -109,7 +108,7 @@ const Dish = styled.div`
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     inline-size: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/6;
   }
   .overview{
     p{

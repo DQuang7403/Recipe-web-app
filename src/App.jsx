@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import CategoryLayout from "./components/CategoryLayout";
 import Cuisine from "./components/Cuisine";
-
+import NutritionInform from "./components/nutritionInform";
 //import pages
 
 import Home from "./pages/Home";
@@ -16,6 +16,7 @@ import About from "./pages/About";
 // +) recipes pages
 import RecipeDetail from "./pages/RecipeDetail";
 import SearchOutput from "./pages/SearchOutput";
+import NutritionDetail from "./components/nutritionDetail";
 
 
 function App() {
@@ -30,7 +31,10 @@ function App() {
           <Route path="Detail/:id" element={<RecipeDetail />}></Route>
           <Route path="Search/:search" element={<SearchOutput />}></Route>
         </Route>
-        <Route path="/Nutrition" element={<Nutrition />}></Route>
+        <Route path="/Nutrition" element={<Nutrition />}>
+          <Route index element={<NutritionDetail />} />
+          <Route  path="Detail/:id" element={<NutritionInform />}></Route>
+        </Route>
         <Route path="/About" element={<About />}></Route>
       </Routes>
     </>

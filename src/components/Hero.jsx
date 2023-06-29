@@ -49,7 +49,7 @@ const HeroSection = styled.section`
   img {
     width: min(40em, 50vw);
     position: relative;
-    transform: translate(5em, 0);
+    transform: translate(17%, 0);
   }
   @media (width <= 750px) {
     justify-content: center;

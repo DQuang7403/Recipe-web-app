@@ -47,6 +47,7 @@ const Container = styled.div`
   margin-top: 1em;
   gap: 2em;
   
+  
 `;
 const Wrapper = styled.section`
   display: flex;
@@ -54,7 +55,8 @@ const Wrapper = styled.section`
   justify-content: center;
   gap: 1em;
   margin: 0 auto;
-  /* overflow-x: scroll; */
+  flex-wrap: wrap;
+  flex: 1;
 `;
 const Card = styled.button`
   background-color: #d9d9d9;

@@ -107,11 +107,11 @@ const Container = styled.div`
       position: fixed;
       z-index: 1000;
       inset: 0 0 0 20%;
-      background: var(--primary-color);
+      background: #3E4564;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      padding: min(30vh, 10rem) 2em;
+      padding: min(30vh, 10rem) 1em;
       gap: 0;
       transition: transform 350ms ease-in;
       
