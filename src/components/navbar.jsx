@@ -107,7 +107,7 @@ const Container = styled.div`
       position: fixed;
       z-index: 1000;
       inset: 0 0 0 20%;
-      background: #3E4564;
+      background: var(--primary-color);
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
@@ -115,6 +115,10 @@ const Container = styled.div`
       gap: 0;
       transition: transform 350ms ease-in;
       
+    }
+    .aboutBtn{
+      border-radius: 8px;
+      padding: 1em ;
     }
     #navLinks[data-visible="false"]{
       transform: translateX(100%);

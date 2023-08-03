@@ -52,8 +52,9 @@ export default function Trending() {
   );
 }
 const Wrapper = styled.section`
+  background-color: #F7F7F3;
+  padding-inline: 1.25em;
   padding-bottom: 1em;
-  margin: 0 5%;
   width: 100vw;
   h2 {
     padding: 1.5rem;
@@ -62,11 +63,27 @@ const Wrapper = styled.section`
     margin-inline: 1em;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 35%;
+    grid-auto-columns: 30%;
     gap: 1rem;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    padding: 0 .5em 1em .5em;
+    ::-webkit-scrollbar{
+      height: .5em;
+    }
+    ::-webkit-scrollbar-track{
+      background: #d9d9d9;
+      border-radius: 100vw;
+      margin-inline: 1em
+    }
+    ::-webkit-scrollbar-thumb{
+      background: var(--primary-color);
+      border-radius: 100vw;
+
+    }
+
   }
+  
   .snaps-inline {
     scroll-snap-type: inline mandatory;
   }
@@ -74,7 +91,13 @@ const Wrapper = styled.section`
     scroll-snap-align: start;
     scroll-padding-inline: 1.5em;
   }
+  @media (width <= 1024px) {
+    .slider {
+      grid-auto-columns: 50%;
+    }
+  }
   @media (width <= 500px) {
+    padding-inline: 0;
     .slider {
       grid-auto-columns: 100%;
     }
@@ -82,6 +105,7 @@ const Wrapper = styled.section`
 `;
 
 const Dish = styled.div`
+margin-block:.25em;
   max-width: 25em;
   border-radius: 15px;
   display: grid;
@@ -100,15 +124,12 @@ const Dish = styled.div`
     margin-top: 0.6em;
     margin-left: .5em;
   }
-  p:last-child{
-    margin-bottom: .6em;
-  }
   
   img {
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     inline-size: 100%;
-    aspect-ratio: 16/6;
+    aspect-ratio: 16/7;
   }
   .overview{
     p{

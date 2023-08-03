@@ -52,6 +52,7 @@ const Container = styled.section`
   @media (width <= 1024px) {
     align-items: center;
     flex-direction: column;
+    padding: 1em;
   }
   .iconAndContact {
     max-width: 20em;

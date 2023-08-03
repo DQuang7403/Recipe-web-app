@@ -34,7 +34,7 @@ export default function SearchOutput() {
   );
 }
 const Grid = styled.div`
-  margin-top: 2em;
+  margin-block: 2em;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));

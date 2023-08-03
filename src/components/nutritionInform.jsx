@@ -6,7 +6,7 @@ export default function nutritionInform() {
   const [nutrients, setNutrients] = useState([]);
   const input = useParams();
 
-  console.log(nutrients);
+  console.log(data);
   useEffect(() => {
     setNutrients(data?.nutrition?.nutrients);
   }, [data]);
@@ -41,6 +41,7 @@ export default function nutritionInform() {
       }
     } catch (err) {
       console.error(err);
+      
     }
 
     // console.log(id.results[0].id);
@@ -123,11 +124,11 @@ const Table = styled.section`
   border: 1px solid #8b8b8b;
   border-radius: 37px;
   width: 80vw;
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 2em;
   @media (width <= 1024px) {
-    padding:0;
-    margin: 1rem 0;
+    padding: 1rem;
+    margin: 2rem 0;
   }
 `;
 const Row = styled.div`
@@ -141,6 +142,11 @@ const Row = styled.div`
   font-size: 1.5rem;
   @media (width <= 1024px) {
     font-size: .9rem;
+    margin: 0.3rem;
+    padding: .7rem;
+  }
+  @media (width <= 500px) {
+    font-size: 12px;
     margin: 0.3rem;
     padding: .7rem;
   }

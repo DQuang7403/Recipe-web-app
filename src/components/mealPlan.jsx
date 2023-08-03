@@ -19,7 +19,7 @@ export default function MealPlan() {
             choices. Using our ingredient nutrition section for healthier meal
             planning and overall wellness.
           </div>
-          <Link to="/MealPlanning">
+          <Link to="/Nutrition">
             <button className="onActionButton">Start now!</button>
           </Link>
         </MealPlanContainer>
@@ -44,6 +44,8 @@ const MealPlanSection = styled.div`
     flex-direction: column;
     gap: 2em;
     align-items: center;
+    margin: 2em 1em;
+    text-align: center;
   }
 `;
 const MealPlanContainer = styled.div`

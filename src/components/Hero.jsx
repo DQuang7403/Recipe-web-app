@@ -53,6 +53,8 @@ const HeroSection = styled.section`
   }
   @media (width <= 750px) {
     justify-content: center;
+    align-items: center;
+    margin-left: 1em;
     img {
       display: none;
     }

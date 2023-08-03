@@ -9,7 +9,7 @@ export default function SearchInput() {
   const submitHandler = (e) => {
     e.preventDefault();
     if(Search === "") return;
-    navigate("/recipe/search/" + Search);
+    navigate("/recipe/Search/" + Search);
     console.log(Search);
   };
   return (
@@ -32,7 +32,7 @@ export default function SearchInput() {
   );
 }
 const StyledSearch = styled.input`
-  width: clamp(1em, 35vw, 10em);
+  width: clamp(3em, 75vw, 30em);
   padding: 0.6em 0.5em;
   border-radius: 12px;
   margin-right: 0.8em;
@@ -40,6 +40,9 @@ const StyledSearch = styled.input`
   background-color: #d9d9d9;
   border: 0;
   flex: 1;
+  @media (width <= 750px) {
+    font-size: 14px ;
+  }
 `;
 const ButtonStyle = styled.button`
   all: unset;
@@ -51,6 +54,7 @@ const ButtonStyle = styled.button`
   cursor: pointer;
   width: clamp(1em, 100%, 3em);
   img {
-    width: clamp(1em, 100%, 3em);
+    width: 40px;
   }
+  
 `;

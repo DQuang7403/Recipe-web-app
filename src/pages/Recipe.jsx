@@ -5,7 +5,7 @@ import Dessert from "../components/Dessert";
 
 export default function Recipe() {
   return (
-    <section>
+    <section >
       <Trending />
       <Dessert />
     </section>

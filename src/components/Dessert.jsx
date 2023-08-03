@@ -69,9 +69,9 @@ export default function Dessert() {
   );
 }
 const Wrapper = styled.section`
-  /* background: var( --background-green-color); */
-  padding-bottom: 1em;
-  margin: 0 5%;
+  background-color: #F7F7F3;
+  padding-inline: 1.25em;
+  padding-block: 1em;
   width: 100vw;
   h2 {
     padding: 1.5rem;
@@ -80,11 +80,27 @@ const Wrapper = styled.section`
     margin-inline: 1em;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 21%;
+    grid-auto-columns: 30%;
     gap: 1rem;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    padding: 0 .5em 1em .5em;
+    ::-webkit-scrollbar{
+      height: .5em;
+    }
+    ::-webkit-scrollbar-track{
+      background: #d9d9d9;
+      border-radius: 100vw;
+      margin-inline: 1em
+    }
+    ::-webkit-scrollbar-thumb{
+      background: var(--primary-color);
+      border-radius: 100vw;
+
+    }
+
   }
+  
   .snaps-inline {
     scroll-snap-type: inline mandatory;
   }
@@ -94,55 +110,49 @@ const Wrapper = styled.section`
   }
   @media (width <= 1024px) {
     .slider {
-      grid-auto-columns: 25%;
-    }
-  }
-  @media (width <= 750px) {
-    .slider {
-      grid-auto-columns: 35%;
+      grid-auto-columns: 50%;
     }
   }
   @media (width <= 500px) {
+    padding-inline: 0;
     .slider {
       grid-auto-columns: 100%;
     }
   }
 `;
-//550
+
 const Dish = styled.div`
+margin-block:.25em;
   max-width: 25em;
   border-radius: 15px;
   display: grid;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
   background: #ffffff;
-  h4 {
-    margin: 0.5em;
+  h4{
+    margin: .5em;
   }
   p {
     display: flex;
     align-items: center;
-    gap: 0.5em;
-    font-size: .8rem;
+    gap: .5em;
+    font-size: 1rem;
     text-align: center;
     font-weight: 600;
     margin-top: 0.6em;
-    margin-left: 0.5em;
+    margin-left: .5em;
   }
-  p:last-child {
-    margin-bottom: 0.6em;
-  }
-
+  
   img {
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     inline-size: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/7;
   }
-  .overview {
-    p {
-      color: #6f737a;
+  .overview{
+    p{
+      color: #6F737A;
     }
-    img {
+    img{
       width: 20px;
       aspect-ratio: 1;
       border-radius: 0;

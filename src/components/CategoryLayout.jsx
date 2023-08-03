@@ -9,12 +9,7 @@ export default function CategoryLayout() {
       <h1 style={{textAlign:"center", marginTop:"1.3em"}}>Check out our featured recipes section</h1>
       <SearchInput />
       <Wrapper>
-        <NavLink
-          to=""
-          // className={({ isActive, isPending }) =>
-          //   isPending ? "pending" : isActive ? "active" : ""
-          // }
-        >
+        <NavLink>
           <Card>
             <h4>Trending</h4>
           </Card>
@@ -47,7 +42,6 @@ const Container = styled.div`
   margin-top: 1em;
   gap: 2em;
   
-  
 `;
 const Wrapper = styled.section`
   display: flex;
@@ -71,5 +65,8 @@ const Card = styled.button`
   a.active {
     background-color: var(--primary-color);
     color: white;
+  }
+  @media (width <= 500px) {
+    font-size: .7rem;
   }
 `;
